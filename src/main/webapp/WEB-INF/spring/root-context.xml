@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	<bean name="userDao" class="com.me.project.dao.UserDao" scope ="request"/>	
+	<bean name="adminDao" class="com.me.project.dao.AdminDao" scope ="request"/>	
+	<bean name="handlerDao" class="com.me.project.dao.HandlerDao" scope ="request"/>
+	<bean name="interviewFeedbackDao" class="com.me.project.dao.InterviewFeedbackDao" scope ="request"/>	
+	
+	<bean name="validateUser" class="com.me.project.validation.UserValidation" scope="application" />
+	<bean name="validateLogin" class="com.me.project.validation.LoginValidation" scope="application" />
+	<bean name="validateInterviewFeedback" class="com.me.project.validation.InterviewFeedbackValidation" scope="application" />
+
+</beans>
